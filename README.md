@@ -135,22 +135,22 @@ Communication between them happens via:
 
 ---
 
-# 📂 2. Question-wise Solutions
+#  2. Question-wise Solutions
 
 To maintain clarity and avoid clutter, each question is answered in a separate markdown file.
 
 ##  Structure
-
-- [Q1.md](./Q1.md) → Rust vs Python design decision  
-- [Q2.md](./Q2.md) → Why Apache Arrow format  
-- [Q3.md](./Q3.md) → Join algorithm selection  
-- [Q4.md](./Q4.md) → Logical vs physical optimization  
-- [Q5.md](./Q5.md) → Importance of optimization order  
-- [Q6.md](./Q6.md) → Logical vs physical plan separation  
-- [Q7.md](./Q7.md) → Handling multiple data formats  
-- [Q8.md](./Q8.md) → Cardinality estimation challenges  
-- [Q9.md](./Q9.md) → Join ordering problem  
-- [Q10.md](./Q10.md) → SQL vs DataFrame API  
+please refer - 
+- [Q1.md](./Q1.md) → Rust vs Python design decision (Q1.md) 
+- [Q2.md](./Q2.md) → Why Apache Arrow format (Q2.md) 
+- [Q3.md](./Q3.md) → Join algorithm selection  (Q3.md)
+- [Q4.md](./Q4.md) → Logical vs physical optimization (Q4.md)md) 
+- [Q5.md](./Q5.md) → Importance of optimization order (Q5.md) 
+- [Q6.md](./Q6.md) → Logical vs physical plan separation (Q6.md)
+- [Q7.md](./Q7.md) → Handling multiple data formats  (Q7.md)
+- [Q8.md](./Q8.md) → Cardinality estimation challenges (Q8.md) 
+- [Q9.md](./Q9.md) → Join ordering problem  (Q9.md)
+- [Q10.md](./Q10.md) → SQL vs DataFrame API  (Q10.md)
 
 Each file contains:
 - Detailed explanation  
@@ -269,7 +269,7 @@ DataFusion uses heuristics to:
 
 ---
 
-## 🎯 Final Conclusion
+##  Final Conclusion
 
 Apache Arrow DataFusion represents a modern approach to query engine design by combining:
 
