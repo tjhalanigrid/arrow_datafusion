@@ -1,16 +1,16 @@
-# 📊 Project 4: Reverse Engineering Report
+#  Project 4: Reverse Engineering Report
 
-## 🔹 Project Name
+##  Project Name
 Apache Arrow DataFusion
 
-## 🔹 Repository  
+##  Repository  
 https://github.com/apache/datafusion
 
 ---
 
-# 🧠 1. Project Overview and Key Components
+#  1. Project Overview and Key Components
 
-## 📌 Repository Analysis Summary
+##  Repository Analysis Summary
 
 Apache Arrow DataFusion is an open-source, high-performance query execution engine written in Rust. It is designed to process analytical workloads efficiently using a columnar in-memory data format provided by Apache Arrow.
 
@@ -24,7 +24,7 @@ The system emphasizes:
 
 ---
 
-## 🚀 Core Objectives
+##  Core Objectives
 
 - Execute complex SQL queries efficiently
 - Provide a reusable and embeddable query engine
@@ -34,7 +34,7 @@ The system emphasizes:
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 DataFusion follows a multi-stage query processing pipeline:
 
@@ -85,7 +85,7 @@ These optimizations reduce data processing early in the pipeline.
 
 ---
 
-## 📦 Key Components
+##  Key Components
 
 ### 🔹 ExecutionPlan
 - Core abstraction for physical operators
@@ -110,7 +110,7 @@ These optimizations reduce data processing early in the pipeline.
 
 ---
 
-## ⚙️ Execution Model
+##  Execution Model
 
 DataFusion uses a **streaming execution model**, meaning:
 - Data is processed in chunks (RecordBatches)
@@ -124,7 +124,7 @@ It also uses **asynchronous execution**, allowing:
 
 ---
 
-## 🔗 Language Integration
+##  Language Integration
 
 - Core engine → Rust (performance + safety)
 - Python API → usability and ecosystem support
@@ -139,7 +139,7 @@ Communication between them happens via:
 
 To maintain clarity and avoid clutter, each question is answered in a separate markdown file.
 
-## 📁 Structure
+##  Structure
 
 - [Q1.md](./Q1.md) → Rust vs Python design decision  
 - [Q2.md](./Q2.md) → Why Apache Arrow format  
@@ -159,7 +159,7 @@ Each file contains:
 
 ---
 
-# 🔍 3. Findings and Conclusion
+#  3. Findings and Conclusion
 
 ## ✅ 1. Rust as Core Engine
 
@@ -273,17 +273,17 @@ DataFusion uses heuristics to:
 
 Apache Arrow DataFusion represents a modern approach to query engine design by combining:
 
-- 🚀 High performance (Rust)
-- 🧠 Intelligent optimization (query planner)
-- 📦 Efficient data format (Arrow)
-- 🔄 Streaming execution model
-- 🔗 Multi-language support
+-  High performance (Rust)
+-  Intelligent optimization (query planner)
+-  Efficient data format (Arrow)
+-  Streaming execution model
+-  Multi-language support
 
 It demonstrates how system-level design decisions—such as language choice, data representation, and execution strategies—play a crucial role in building scalable and efficient data processing systems.
 
 ---
 
-## 💡 Key Takeaways
+##  Key Takeaways
 
 - Systems design matters as much as algorithms  
 - Data format standardization improves interoperability  
@@ -292,9 +292,8 @@ It demonstrates how system-level design decisions—such as language choice, dat
 - Combining low-level performance with high-level usability is powerful  
 
 ---
----
 
-## 👩‍💻 Author
+##  Author
 
 **Tanisha Jhalani**
 (Data Science intern)
