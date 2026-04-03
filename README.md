@@ -144,7 +144,7 @@ please refer -
 - [Q1.md](./Q1.md) → Rust vs Python design decision (Q1.md) 
 - [Q2.md](./Q2.md) → Why Apache Arrow format (Q2.md) 
 - [Q3.md](./Q3.md) → Join algorithm selection  (Q3.md)
-- [Q4.md](./Q4.md) → Logical vs physical optimization (Q4.md)md) 
+- [Q4.md](./Q4.md) → Logical vs physical optimization (Q4.md) 
 - [Q5.md](./Q5.md) → Importance of optimization order (Q5.md) 
 - [Q6.md](./Q6.md) → Logical vs physical plan separation (Q6.md)
 - [Q7.md](./Q7.md) → Handling multiple data formats  (Q7.md)
