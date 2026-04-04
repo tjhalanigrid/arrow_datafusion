@@ -155,60 +155,71 @@ This separation enables:
 - Flexible execution strategies  
 
 ---
-
 ###  Detailed Stage Explanation
 
 ### 1️⃣ SQL Parsing
-- SQL queries are parsed into an abstract syntax tree (AST)  
-- This represents the structure of the query  
+- SQL queries are parsed into an Abstract Syntax Tree (AST) using a SQL parser  
+- The AST represents the syntactic structure of the query in a hierarchical form  
+- Ensures correctness of query syntax before further processing  
+
+ *Role:* Converts raw user input into a structured representation that the system can understand  
 
 ---
 
 ### 2️⃣ Logical Plan
-- Defines *what* needs to be computed  
-- Independent of execution strategy  
+- Defines *what* needs to be computed without specifying how  
+- Acts as an intermediate representation of the query  
+- Independent of execution strategy and underlying hardware  
 
 #### Example operations:
-- Projection  
-- Filter  
-- Join  
-- Aggregation  
+- Projection (select specific columns)  
+- Filter (apply conditions using WHERE)  
+- Join (combine multiple datasets)  
+- Aggregation (GROUP BY, COUNT, SUM, etc.)  
+
+ *Role:* Provides a high-level, optimized representation of the query logic  
 
 ---
 
 ### 3️⃣ Logical Optimization
-- Applies rule-based transformations  
+- Applies rule-based transformations to improve efficiency before execution  
+- Focuses on reducing data volume and computation early in the pipeline  
 
 #### Examples:
-- Predicate Pushdown  
-- Column Pruning  
-- Expression Simplification  
+- Predicate Pushdown → Moves filters closer to data source  
+- Column Pruning → Removes unnecessary columns  
+- Expression Simplification → Reduces computational complexity  
 
-These optimizations reduce data processing early in the pipeline.
+ *Impact:* Minimizes the amount of data processed in later stages, significantly improving performance  
 
 ---
 
 ### 4️⃣ Physical Planning
-- Converts logical plan into physical plan  
-- Decides *how* to execute operations  
+- Converts the logical plan into a physical execution plan  
+- Determines *how* each operation will be executed  
+- Selects appropriate algorithms based on data size, structure, and query type  
 
 #### Algorithms:
-- Hash Join  
-- Sort-Merge Join  
-- Nested Loop Join  
+- Hash Join → Efficient for equality-based joins  
+- Sort-Merge Join → Useful when inputs are sorted  
+- Nested Loop Join → Used for complex or fallback scenarios  
+
+ *Role:* Maps abstract operations to concrete execution strategies  
 
 ---
 
 ### 5️⃣ Execution Engine
-- Executes the physical plan  
+- Executes the physical plan using optimized Rust-based operators  
+- Processes data in a streaming manner using RecordBatches (Apache Arrow)  
 
 #### Features:
-- Parallel processing  
-- Streaming execution  
-- Async runtime  
+- Parallel execution across multiple threads  
+- Streaming processing (chunk-wise execution)  
+- Asynchronous runtime for non-blocking operations  
+
+ *Outcome:* Efficient execution of queries with reduced memory usage and improved scalability  
 
 ---
-
 ##  Key Components
 
 ###  ExecutionPlan
@@ -393,7 +404,7 @@ DataFusion uses heuristics to:
 - Enables dynamic query construction  
 
 ---
-## 🎯 Final Conclusion
+##  Final Conclusion
 
 Apache Arrow DataFusion represents a state-of-the-art approach to building analytical query engines by combining efficient system design, modern programming paradigms, and high-performance data processing techniques.
 
@@ -407,7 +418,7 @@ Overall, DataFusion demonstrates how thoughtful integration of system-level desi
 
 ---
 
-## 💡 Key Takeaways
+##  Key Takeaways
 
 - **System design plays a critical role** in building scalable and efficient data processing systems  
 - **Separation of logical and physical plans** enables better optimization and flexibility  
